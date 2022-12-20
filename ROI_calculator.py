@@ -10,7 +10,7 @@ def bnfts_expns_ratio():
   print(f"Benefits/Expenses ratio: {ratio}")
 
 def roi():
-  ROI = ((Benefits / Expenses) / Expenses) * 100
+  ROI = ((bnfts() / Expenses) / Expenses) * 100
   print(f"Roi: {ROI}")
 
 bnfts()
