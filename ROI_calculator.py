@@ -1,18 +1,22 @@
+#Shift + alt + A = comment whole selection
 Income = float(input("Income: "))
-Expenses = float(input("Expenses :"))
+Expenses = float(input("Expenses: "))
 
 def bnfts():
-  Benefits = Income - Expenses
-  print(f"Benefits: {Benefits}")
+  Benefits = round(Income - Expenses, 2)
+  return Benefits
 
-def bnfts_expns_ratio():
-  ratio = (((Income / Expenses) * 100) - 100)
-  print(f"Benefits/Expenses ratio: {ratio}")
+print(f"Benefits: {bnfts()}")
+
+#def bnfts_expns_ratio():
+#  ratio = round(((Income / Expenses) * 100) - 100, 2)
+#  return ratio
+# Per alguna raó matemàgica que no arribo a comprendre, això em dona el mateix que el ROI
+
+#print(f"Benefits/Expenses ratio: {bnfts_expns_ratio()}%")
 
 def roi():
-  ROI = ((bnfts() / Expenses) / Expenses) * 100
-  print(f"Roi: {ROI}")
+  ROI = round(((Income - Expenses) / Expenses), 2)
+  return ROI
 
-bnfts()
-bnfts_expns_ratio()
-roi()
+print(f"Roi: {roi()}")
